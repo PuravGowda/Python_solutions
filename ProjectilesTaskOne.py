@@ -8,17 +8,19 @@ def radians(deg):
 x = []
 y = []
 theta = radians(45)
-u = [0, 0]
-v = [50*m.cos(theta), 50*m.sin(theta)]
+d = [0, 0]
+u = 50
+v = [u*m.cos(theta), u*m.sin(theta)]
 g = 10
 res = 50
+initial_height = 2
 
 for i in range(res):
-    x.append(u[0])
-    y.append(u[1])
+    x.append(d[0])
+    y.append(d[1])
     v[1] -= g/(res/10)
-    u[0] += v[0]/(res/10)
-    u[1] += v[1]/(res/10)
+    d[0] += v[0]/(res/10)
+    d[1] += v[1]/(res/10)
 
     
     
